@@ -24,15 +24,30 @@ The Growth and Product leadership teams observed strong sign-up volume driven by
 ## 🏗️ Relational Schema & Architecture
 The analysis relies on a transactional relational schema hosted in a containerized **PostgreSQL 15** environment:
 
-```text
-+------------------+         +------------------+         +------------------------+
-|      users       |         |   user_events    |         | financial_transactions |
-+------------------+         +------------------+         +------------------------+
-| user_id (PK)     |<-------1| event_id (PK)    |         | transaction_id (PK)    |
-| signup_timestamp |         | user_id (FK)     |         | user_id (FK)           |
-| acquisition_chan |         | event_name       |         | transaction_type       |
-| user_segment     |         | event_timestamp  |         | amount, status         |
-+------------------+         +------------------+         +------------------------+
+```mermaid
+erDiagram
+    users ||--o{ user_events : "generates"
+    users ||--o{ financial_transactions : "initiates"
+
+    users {
+        uuid user_id PK
+        timestamptz signup_timestamp
+        string acquisition_channel
+        string user_segment
+    }
+    user_events {
+        uuid event_id PK
+        uuid user_id FK
+        string event_name
+        timestamptz event_timestamp
+    }
+    financial_transactions {
+        uuid transaction_id PK
+        uuid user_id FK
+        string transaction_type
+        decimal amount
+        string status
+    }
 ```
 
 ---
