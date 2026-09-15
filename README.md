@@ -5,6 +5,9 @@
 ![Python](https://img.shields.io/badge/Python-3.x-yellow)
 ![Product Analytics](https://img.shields.io/badge/Focus-Product_%26_Finance-green)
 
+## 📉 Executive Dashboard Overview
+![FinTech Funnel Dashboard](dashboards/funnel_dashboard.png)
+
 ## 📌 Executive Summary
 This project evaluates the end-to-end user onboarding conversion funnel for a digital banking platform to identify operational friction and quantify lost liquidity. Analyzing **1,200 user journeys** over a 6-month period using **PostgreSQL**, **Docker**, and **Python**, I uncovered that the **KYC (Know Your Customer) document verification phase represents the primary bottleneck**, with a drop-off rate of **42.86%**. This friction resulted in **360 qualified users abandoning onboarding**, translating to an estimated **$393,175 in lost initial deposit volume**.
 
