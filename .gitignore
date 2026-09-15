@@ -14,3 +14,6 @@ venv/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Tableau temp / lock files
+.~*
