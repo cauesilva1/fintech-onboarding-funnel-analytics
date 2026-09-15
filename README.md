@@ -30,29 +30,19 @@ The Growth and Product leadership teams observed strong sign-up volume driven by
 The analysis relies on a transactional relational schema hosted in a containerized **PostgreSQL 15** environment:
 
 ```mermaid
-erDiagram
-    users ||--o{ user_events : generates
-    users ||--o{ financial_transactions : initiates
-    users {
-        string user_id PK
-        datetime signup_timestamp
-        string acquisition_channel
-        string user_segment
-    }
-    user_events {
-        string event_id PK
-        string user_id FK
-        string event_name
-        datetime event_timestamp
-    }
-    financial_transactions {
-        string transaction_id PK
-        string user_id FK
-        string transaction_type
-        float amount
-        string status
-    }
+graph LR
+    users[users]
+    user_events[user_events]
+    financial_transactions[financial_transactions]
+    users -->|generates| user_events
+    users -->|initiates| financial_transactions
 ```
+
+| Table | Key columns |
+|---|---|
+| `users` | `user_id` (PK), `signup_timestamp`, `acquisition_channel`, `user_segment` |
+| `user_events` | `event_id` (PK), `user_id` (FK), `event_name`, `event_timestamp` |
+| `financial_transactions` | `transaction_id` (PK), `user_id` (FK), `transaction_type`, `amount`, `status` |
 
 ---
 
