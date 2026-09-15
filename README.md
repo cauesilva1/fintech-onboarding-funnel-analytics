@@ -26,26 +26,25 @@ The analysis relies on a transactional relational schema hosted in a containeriz
 
 ```mermaid
 erDiagram
-    users ||--o{ user_events : "generates"
-    users ||--o{ financial_transactions : "initiates"
-
+    users ||--o{ user_events : generates
+    users ||--o{ financial_transactions : initiates
     users {
-        uuid user_id PK
-        timestamptz signup_timestamp
+        string user_id PK
+        datetime signup_timestamp
         string acquisition_channel
         string user_segment
     }
     user_events {
-        uuid event_id PK
-        uuid user_id FK
+        string event_id PK
+        string user_id FK
         string event_name
-        timestamptz event_timestamp
+        datetime event_timestamp
     }
     financial_transactions {
-        uuid transaction_id PK
-        uuid user_id FK
+        string transaction_id PK
+        string user_id FK
         string transaction_type
-        decimal amount
+        float amount
         string status
     }
 ```
