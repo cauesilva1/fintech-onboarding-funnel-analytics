@@ -8,8 +8,9 @@
 ## 📉 Executive Dashboard Overview
 
 [![Tableau Dashboard](https://img.shields.io/badge/Tableau-Live_Interactive_Dashboard-E97627?style=for-the-badge&logo=tableau)](https://public.tableau.com/views/planilha1_17894949408060/Painel1?:language=pt-BR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[![Executive PDF](https://img.shields.io/badge/PDF-Executive_Summary_Deck-B30B00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](docs/executive_summary.pdf)
 
-Interactive Tableau Public dashboard with the full onboarding funnel, KYC cohort trends, and acquisition-channel breakdown. The workbook file (**Planilha 1** / `dashboards/planilha1.twb`) is also saved locally in this repository for offline review and iteration.
+Interactive Tableau Public dashboard with the full onboarding funnel, KYC cohort trends, and acquisition-channel breakdown. The workbook file (**Planilha 1** / `dashboards/planilha1.twb`) is also saved locally in this repository for offline review and iteration. An executive 3-slide PDF deck is available at [`docs/executive_summary.pdf`](docs/executive_summary.pdf) (regenerate with `python3 scripts/generate_pdf_deck.py`).
 
 ![FinTech Funnel Dashboard](dashboards/funnel_dashboard.png)
 

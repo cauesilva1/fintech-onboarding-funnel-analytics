@@ -7,3 +7,5 @@ seaborn>=0.13.0
 nbconvert>=7.0.0
 nbclient>=0.10.0
 ipykernel>=6.0.0
+openpyxl>=3.1.0
+reportlab>=4.0.0
