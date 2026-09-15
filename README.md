@@ -76,8 +76,9 @@ erDiagram
 - **Post-Approval Activation Nudges:** Trigger automated SMS/Email reminders 24 to 48 hours post-KYC approval for users who haven't initiated an initial deposit to reduce the 7-day TTV lag.
 
 ## 🛠️ Technical Skills Demonstrated
-- **Advanced SQL:** Common Table Expressions (CTEs), Aggregations, Ratio Metrics, Conditional Aggregation, and LAG() Window Functions for time-delta metrics.
+- **Advanced SQL:** Common Table Expressions (CTEs), Aggregations, Ratio Metrics, Conditional Aggregation, LAG() / LEAD() / FIRST_VALUE() Window Functions for cohort MoM deltas and channel benchmarking.
 - **Data Modeling:** Star Schema design, foreign key integrity, and conditional checks.
+- **Product Analytics:** Cohort KYC health by signup month and acquisition-channel funnel retention.
 - **DevOps Containerization:** Docker Compose setup with healthcheck and automated script ingestion.
 
 ## 🚀 How to Run Locally
